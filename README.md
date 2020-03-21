@@ -26,7 +26,7 @@ Mat diff = new Mat();
 Core.absdiff(gris, pgris, diff);
 ```
 
-<li>En el tercer efecto se ha hecho uso del filtro Canny de OpenCV. Este filtro captura, en una imagen en blanco y negro, los bordes de una imagen en escala de grises que se recibe como parámetro del método. Los bordes se ajustan a unos determinados umbrales para modificar el resultado de la salida al gusto o necesidad del usuario. El efecto se produce al añadir, a la imagen de salida, los bordes calculados mediante este filtro en color rojo sólido.</li>
+<li>En el tercer efecto se ha hecho uso del filtro Canny de OpenCV. Este filtro captura, en una imagen en blanco y negro, los bordes de una imagen en escala de grises que el método recibe como parámetro. Los bordes se ajustan a unos determinados umbrales para modificar el resultado de la salida al gusto o necesidad del usuario. El efecto se produce al añadir, a la imagen de salida, los bordes calculados mediante este filtro en color rojo sólido.</li>
 
 ```java
 Mat canny = img.getGrey();
