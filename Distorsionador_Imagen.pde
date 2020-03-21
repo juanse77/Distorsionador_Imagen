@@ -29,9 +29,22 @@ void setup() {
   auximg = new CVImage(cam.width, cam.height);
 }
 
+void imprime_mensaje(){
+  noStroke();
+  fill(230, 10, 30);
+  rect(0, 0, width/2, 28);
+  
+  textFont(createFont("Arial", 14));
+  textAlign(LEFT, TOP);
+  
+  fill(255);
+  text("Deslice el ratón a derecha e izquierda para cambiar la transparencia de la imagen transformada", 5, 5);
+}
+
 void draw() {  
   if (cam.available()) {
     background(0);
+    
     cam.read();
     
     img.copy(cam, 0, 0, cam.width, cam.height, 
@@ -50,6 +63,8 @@ void draw() {
     compoundImage(canny, diff, img, auximg);
     
     image(img,0,0);
+    
+    imprime_mensaje();
     
     float transparencia = 0;
     if(mouseX > width/2){
